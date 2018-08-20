@@ -40,24 +40,24 @@
 
 #else // IS LIVE STEEM NETWORK
 
-#define STEEMIT_INIT_PUBLIC_KEY_STR             "VIT6mEDy9EschxGjS1LJhb7zQrbmoWqrkg1n9fGiNfParFmC2mA9a"
+#define STEEMIT_INIT_PUBLIC_KEY_STR             "WIT6MP7SKHhNbCw8jZqgzXcfEK6Wk7e6yYyTVQF4LZu2cWs5R7xLB"
 //#define STEEMIT_CHAIN_ID                        (steemit::protocol::chain_id_type())
-#define STEEMIT_CHAIN_ID                        (fc::sha256::hash("vit"))
+#define STEEMIT_CHAIN_ID                        (fc::sha256::hash("wit"))
 #define VESTS_SYMBOL  (uint64_t(6) | (uint64_t('V') << 8) | (uint64_t('E') << 16) | (uint64_t('S') << 24) | (uint64_t('T') << 32) | (uint64_t('S') << 40)) ///< VESTS with 6 digits of precision
-#define STEEM_SYMBOL  (uint64_t(3) | (uint64_t('V') << 8) | (uint64_t('I') << 16) | (uint64_t('T') << 24) ) ///< VIT with 3 digits of precision
-#define STMD_SYMBOL   (uint64_t(3) | (uint64_t('V') << 8) | (uint64_t('I') << 16) | (uint64_t('T') << 24) | (uint64_t('D') << 32) ) ///< VIT Dollars with 3 digits of precision
-#define STEEMIT_SYMBOL                          "VIT"
-#define STEEMIT_ADDRESS_PREFIX                  "VIT"
+#define STEEM_SYMBOL  (uint64_t(3) | (uint64_t('W') << 8) | (uint64_t('I') << 16) | (uint64_t('T') << 24) ) ///< VIT with 3 digits of precision
+#define STMD_SYMBOL   (uint64_t(3) | (uint64_t('W') << 8) | (uint64_t('I') << 16) | (uint64_t('T') << 24) | (uint64_t('D') << 32) ) ///< VIT Dollars with 3 digits of precision
+#define STEEMIT_SYMBOL                          "WIT"
+#define STEEMIT_ADDRESS_PREFIX                  "WIT"
 
 #define STEEMIT_GENESIS_TIME                    (fc::time_point_sec(1458835200))
 #define STEEMIT_MINING_TIME                     (fc::time_point_sec(1458838800))
-#define STEEMIT_CASHOUT_WINDOW_SECONDS          (60*60*24*7)  /// 7 days
-#define STEEMIT_SECOND_CASHOUT_WINDOW           (60*60*24*30) /// 30 days
-#define STEEMIT_MAX_CASHOUT_WINDOW_SECONDS      (60*60*24*14) /// 2 weeks
-#define STEEMIT_VOTE_CHANGE_LOCKOUT_PERIOD      (60*60*2)     /// 2 hours
+#define STEEMIT_CASHOUT_WINDOW_SECONDS          (6*24*7)  /// 16 minutes
+#define STEEMIT_SECOND_CASHOUT_WINDOW           (6*24*30) /// 72 minutes
+#define STEEMIT_MAX_CASHOUT_WINDOW_SECONDS      (6*24*14) /// 33 minutes
+#define STEEMIT_VOTE_CHANGE_LOCKOUT_PERIOD      (6*2)     /// 12 seconds
 #define STEEMIT_UPVOTE_LOCKOUT                  (fc::hours(12))
 
-#define STEEMIT_MIN_ACCOUNT_CREATION_FEE           100
+#define STEEMIT_MIN_ACCOUNT_CREATION_FEE           0
 
 #define STEEMIT_OWNER_AUTH_RECOVERY_PERIOD                  fc::days(30)
 #define STEEMIT_ACCOUNT_RECOVERY_REQUEST_EXPIRATION_PERIOD  fc::days(1)
@@ -94,11 +94,11 @@
 #define STEEMIT_MAX_MEMO_SIZE                   2048
 #define STEEMIT_MAX_PROXY_RECURSION_DEPTH       4
 #define STEEMIT_VESTING_WITHDRAW_INTERVALS      13
-#define STEEMIT_VESTING_WITHDRAW_INTERVAL_SECONDS (60*60*24*7) /// 1 week per interval
+#define STEEMIT_VESTING_WITHDRAW_INTERVAL_SECONDS (120) // 2 minutes
 #define STEEMIT_MAX_WITHDRAW_ROUTES             10
-#define STEEMIT_SAVINGS_WITHDRAW_TIME        	(fc::days(3))
+#define STEEMIT_SAVINGS_WITHDRAW_TIME        	(300) // 5 minutes
 #define STEEMIT_SAVINGS_WITHDRAW_REQUEST_LIMIT  100
-#define STEEMIT_VOTE_REGENERATION_SECONDS       (5*60*60*24) // 5 day
+#define STEEMIT_VOTE_REGENERATION_SECONDS       (240) // 4 minutes
 #define STEEMIT_MAX_VOTE_CHANGES                5
 #define STEEMIT_REVERSE_AUCTION_WINDOW_SECONDS  (60*30) /// 30 minutes
 #define STEEMIT_MIN_VOTE_INTERVAL_SEC           3
